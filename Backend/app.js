@@ -19,14 +19,14 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 
-
 //========= Configuracion de retorno
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors())
 
+
 //========= Implementacion de controladores 
-var productoRouter = require('./Routes/productoRoutes')(Producto);
+var productoRouter = require('./routes/productoRoutes');
 app.use('/api/Producto', productoRouter);
 
 
