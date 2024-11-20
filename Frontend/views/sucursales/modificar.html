@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Modificar sucursal</title>
+		<script type="text/javascript" src="/front/js/jquery/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="/front/js/sucursals/modificar.js"></script>
+	</head>
+	<body>
+		<h1>Modificar sucursal</h1>
+		<h5><a href="sucursales.html">Volver</a></h5>
+		<table border="1">
+			<tr><td>Id:</td><td><input type="text" id="sucursalId" /></td></tr>
+			<tr><td>Nombre:</td><td><input type="text" id="sucursalNombre" /></td></tr>
+			<tr><td>Direcci&oacute;n:</td><td><textarea rows="5" id="sucursalDireccion"></textarea></td></tr>
+		</table>
+		<input type="hidden" id="_id" />
+		<input type="button" id="modificar-sucursal" value="Guardar" />
+		<span id="mensaje-resultado"></span>
+		<br />
+		<a href="javascript:history.go(0);">Refrescar</a>
+	</body>
+</html>

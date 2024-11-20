@@ -35,6 +35,10 @@ app.get('/modificarProducto.html', function(req, res) { res.render('productos/mo
 app.get('/jquery-1.12.1.min.js'  , function(req, res) { res.sendFile('src/js/jquery/jquery-1.12.1.min.js')  ; });
 
 
+app.get('/sucursales.html'        , function(req, res) { res.render('sucursales/index.html')     ; });
+app.get('/agregarSucursal.html'  ,  function(req, res) { res.render('sucursales/agregar.html')   ; });
+app.get('/modificarSucursal.html',  function(req, res) { res.render('sucursales/modificar.html')  ; });
+
 //======== Ejecucion de webapps
 app.listen(port, function(){
 	console.log('Running on PORT: ' + port);
