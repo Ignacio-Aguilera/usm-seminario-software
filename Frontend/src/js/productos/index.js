@@ -30,7 +30,7 @@ function Refrescar() {
     
         $('#listado-productos').html('');
         
-        $('#listado-productos').append('<tr><td>C&oacute;digo</td><td>Nombre</td><td>Descripci&oacute;n</td><td>Acciones</td></tr>');
+        $('#listado-productos').append('<thead class="table-primary"><tr><th>C&oacute;digo</th><th>Nombre</th><th>Descripci&oacute;n</th><th>Acciones</th></tr></thead>');
 
         $.ajax({
             

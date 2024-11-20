@@ -27,6 +27,7 @@ var routes = function(Sucursal) {
         .get(function(req, res) {
             res.json(req.sucursal);
         })
+
         .put(async function(req, res) {
             try {
                 Object.assign(req.sucursal, req.body);
@@ -36,12 +37,24 @@ var routes = function(Sucursal) {
                 res.status(400).send('Error al actualizar sucursal: ' + err.message);
             }
         })
+
         .delete(async function(req, res) {
-            try {
-                await req.sucursal.remove();
-                res.status(200).send('Sucursal eliminada');
-            } catch (err) {
-                res.status(500).send('Error al eliminar sucursal: ' + err.message);
+
+            var sucursalToFind = new Sucursal();
+	
+            sucursalToFind._id = req.sucursal._id;
+        
+            var result = await Sucursal.deleteOne(sucursalToFind);
+            
+            if (!result.acknowledged) {
+            
+                res.status(500).send('Sucursal no eliminado');
+            
+            }
+            else {
+        
+                res.status(200).send('Sucursal eliminado');
+        
             }
         });
 

@@ -1,4 +1,4 @@
-function EliminarProducto(id){
+function EliminarSucursal(id){
 
     $.ajax({
 
@@ -30,7 +30,7 @@ function Refrescar() {
     
         $('#listado-sucursals').html('');
         
-        $('#listado-sucursals').append('<tr><td>ID</td><td>Nombre</td><td>Direcci&oacute;n</td><td>Acciones</td></tr>');
+        $('#listado-sucursals').append('<thead class="table-primary"><tr><th>ID</th><th>Nombre</th><th>Direcci&oacute;n</th><th>Acciones</th></tr></thead>');
 
         $.ajax({
             
