@@ -27,7 +27,7 @@ app.use(cors())
 var productoRouter = require('./routes/productoRoutes');
 app.use('/api/Producto', productoRouter);
 
-var sucursalRouter = require('./Routes/sucursalRoutes')(Sucursal);
+var sucursalRouter = require('./routes/sucursalRoutes');
 app.use('/api/Sucursal', sucursalRouter);
 
 //======== Ejecucion de webapps
