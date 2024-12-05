@@ -24,4 +24,4 @@
 	 
  });
  
- module.exports = mongoose.model('Producto', productoModel);
+ module.exports = mongoose.model('productos', productoModel);

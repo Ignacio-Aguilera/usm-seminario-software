@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var SucursalModel = new Schema({
     sucursalId: {
-        type: Number,
+        type: String,
         required: true
     },
     sucursalNombre: {
@@ -17,4 +17,4 @@ var SucursalModel = new Schema({
     }
 });
 
-module.exports = mongoose.model('Sucursal', SucursalModel);
+module.exports = mongoose.model('sucursals', SucursalModel);

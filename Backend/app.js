@@ -13,6 +13,8 @@ mongoose.connect('mongodb://localhost:27017/AplicacionWeb');
 //========== Inicializacion de modelos
 var Producto = require('./models/productoModel');
 var Sucursal = require('./models/sucursalModel');
+var Stock = require('./models/stockModel');
+
 
 //========== Inicializacion de webapp
 var app = express();
@@ -29,6 +31,9 @@ app.use('/api/Producto', productoRouter);
 
 var sucursalRouter = require('./routes/sucursalRoutes');
 app.use('/api/Sucursal', sucursalRouter);
+
+var stockRouter = require('./routes/stockRoutes');
+app.use('/api/Stock', stockRouter);
 
 //======== Ejecucion de webapps
 app.listen(port, function(){

@@ -39,6 +39,10 @@ app.get('/sucursales.html'        , function(req, res) { res.render('sucursales/
 app.get('/agregarSucursal.html'  ,  function(req, res) { res.render('sucursales/agregar.html')   ; });
 app.get('/modificarSucursal.html',  function(req, res) { res.render('sucursales/modificar.html')  ; });
 
+app.get('/stock.html'         , function(req, res) { res.render('stocks/index.html')     ; });
+app.get('/agregarStock.html'  ,  function(req, res) { res.render('stocks/agregar.html')   ; });
+app.get('/modificarStock.html',  function(req, res) { res.render('stocks/modificar.html')  ; });
+
 //======== Ejecucion de webapps
 app.listen(port, function(){
 	console.log('Running on PORT: ' + port);
