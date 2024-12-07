@@ -112,9 +112,9 @@ class StockController {
 		var result = await Stock.updateOne(stockToFind, request.stockEncontrado);
 
 		if (!result.acknowledged) {
-			response.status(500).send('Producto no modificado');
+			response.status(500).send('Stock no modificado');
 		} else {
-			response.status(200).send('Producto modificado');
+			response.status(200).send('Stock modificado');
 		}
 	}
 
@@ -128,9 +128,9 @@ class StockController {
 		var result = await Stock.deleteOne(stockBusqueda);
 
 		if (!result.acknowledged) {
-			response.status(500).send('Producto no eliminado');
+			response.status(500).send('Stock no eliminado');
 		}else {
-			response.status(200).send('Producto eliminado');
+			response.status(200).send('Stock eliminado');
 		}
 
 	};

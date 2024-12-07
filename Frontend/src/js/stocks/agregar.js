@@ -10,12 +10,15 @@ $(function(){
             type: 'POST',
             
             data: {
-            
-                // productoCodigo: $('#productoCodigo').val(),
                 
-                // productoNombre: $('#productoNombre').val(),
-                
-                // productoDescripcion: $('#productoDescripcion').val()
+                sucursal : $('#sucursalSelect').val(),
+
+                producto : $('#productoSelect').val(),
+
+                stock    : $('#cantidadStock').val(),
+
+                stock_critico: $('#stock_critico').val()
+
             
             },
             

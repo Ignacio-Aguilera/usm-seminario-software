@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/front/js/jquery/jquery-1.12.1.min.js"></script>
+
+    {% block script %}
+       
+    {% endblock %}
+    
+    
+    <style>
+        .navbar {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
+
+        .nav-link {
+            font-size: 16px;
+            color: #555; /* Color inicial del texto */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s ease, transform 0.3s ease; /* Animaciones */
+        }
+
+        .nav-link:hover {
+            color: #007bff; /* Color azul al pasar el mouse */
+            transform: scale(1.1); /* Efecto de escala */
+        }
+
+        .nav-link.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .navbar-icon {
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+<main>
+    <body class="bg-light">
+        <div class="container py-4">
+            <nav class="navbar navbar-expand">
+                <ul class="nav mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="sucursales.html">
+                            <i class="fas fa-store navbar-icon"></i> Sucursales
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">
+                            <i class="fas fa-box-open navbar-icon"></i> Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stock.html">
+                            <i class="fas fa-warehouse navbar-icon"></i> Stock
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+    {% block content %}
+    <!-- Este bloque será sobrescrito por las vistas individuales -->
+    {% endblock %}
+
+    </body> 
+</main>
+
+</html>
+

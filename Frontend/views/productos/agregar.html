@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Agregar producto</title>
-    <!-- Incluye Bootstrap CSS desde CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Incluye Font Awesome desde CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <script type="text/javascript" src="/front/js/jquery/jquery-1.12.1.min.js"></script>
-    <script type="text/javascript" src="/front/js/productos/agregar.js"></script>
-</head>
-<body class="bg-light">
+{% extends "layout.html" %}
+{% block script %}
+<script type="text/javascript" src="/front/js/productos/agregar.js"></script>
+{% endblock %}
+{% block content %}
     <div class="container my-4">
         <h1 class="mb-3">Nuevo producto</h1>
         <h5><a href="productos.html" class="text-decoration-none"><i class="fa fa-arrow-left me-1"></i>Volver</a></h5>
@@ -37,5 +29,4 @@
             <i class="fa fa-sync-alt me-1"></i>Actualizar
         </a>
     </div>
-</body>
-</html>
+{% endblock %}
