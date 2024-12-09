@@ -3,30 +3,53 @@
 <script type="text/javascript" src="/front/js/productos/agregar.js"></script>
 {% endblock %}
 {% block content %}
-    <div class="container my-4">
-        <h1 class="mb-3">Nuevo producto</h1>
-        <h5><a href="productos.html" class="text-decoration-none"><i class="fa fa-arrow-left me-1"></i>Volver</a></h5>
+<div class="container my-5">
+    <div class="form-container mx-auto" style="max-width: 600px;">
+        <h1 class="text-center mb-4">
+            <i class="fas fa-box-open me-2"></i> Nuevo Producto
+        </h1>
+        <h5 class="mb-4 text-start">
+            <a href="productos.html" class="text-decoration-none">
+                <i class="fas fa-arrow-left me-2"></i> Volver
+            </a>
+        </h5>
 
         <form>
             <div class="mb-3">
-                <label for="productoCodigo" class="form-label">Código:</label>
-                <input type="text" class="form-control" id="productoCodigo">
+                <label for="productoCodigo" class="form-label">
+                    <i class="fas fa-barcode me-2 text-primary"></i> Código
+                </label>
+                <input type="text" class="form-control" id="productoCodigo" placeholder="Ingrese el código del producto">
             </div>
+
             <div class="mb-3">
-                <label for="productoNombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="productoNombre">
+                <label for="productoNombre" class="form-label">
+                    <i class="fas fa-tag me-2 text-primary"></i> Nombre
+                </label>
+                <input type="text" class="form-control" id="productoNombre" placeholder="Ingrese el nombre del producto">
             </div>
+
             <div class="mb-3">
-                <label for="productoDescripcion" class="form-label">Descripción:</label>
-                <textarea class="form-control" id="productoDescripcion" rows="5"></textarea>
+                <label for="productoDescripcion" class="form-label">
+                    <i class="fas fa-align-left me-2 text-primary"></i> Descripción
+                </label>
+                <textarea class="form-control" id="productoDescripcion" rows="4" placeholder="Escriba una descripción del producto"></textarea>
             </div>
-            <button type="button" id="agregar-producto" class="btn btn-primary">
-                <i class="fa fa-save me-1"></i>Guardar
-            </button>
-            <span id="mensaje-resultado" class="ms-2"></span>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <button type="button" id="agregar-producto" class="btn btn-primary">
+                    <i class="fas fa-save me-2"></i> Guardar
+                </button>
+                <span id="mensaje-resultado" class="d-none text-success">¡Producto guardado exitosamente!</span>
+            </div>
         </form>
-        <a href="javascript:history.go(0);" class="btn btn-outline-secondary mt-3">
-            <i class="fa fa-sync-alt me-1"></i>Actualizar
-        </a>
+
+        <div class="text-center mt-4">
+            <a href="javascript:history.go(0);" class="btn btn-outline-secondary">
+                <i class="fas fa-sync-alt me-2"></i> Actualizar
+            </a>
+        </div>
     </div>
+</div>
+
 {% endblock %}

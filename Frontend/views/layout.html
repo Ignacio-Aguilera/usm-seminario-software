@@ -39,6 +39,55 @@
         .navbar-icon {
             font-size: 18px;
         }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+        }
+        h1 {
+            font-weight: 700;
+            color: #343a40;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: transform 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            transform: scale(1.1);
+        }
+        .btn-outline-secondary {
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .btn-outline-secondary:hover {
+            background-color: #6c757d;
+            color: #fff;
+            transform: scale(1.1);
+        }
+        table {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        th {
+            background-color: #343a40;
+            color: #fff;
+        }
+        td, th {
+            vertical-align: middle;
+            text-align: center;
+        }
+        #listado-productos {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
     </style>
 
 </head>

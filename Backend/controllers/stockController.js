@@ -109,7 +109,8 @@ class StockController {
 		var stockBusqueda = new Stock();
 		stockBusqueda._id = request.stockEncontrado._id;
 
-		var result = await Stock.updateOne(stockToFind, request.stockEncontrado);
+		var result = await Stock.updateOne(stockBusqueda, request.stockEncontrado);
+
 
 		if (!result.acknowledged) {
 			response.status(500).send('Stock no modificado');

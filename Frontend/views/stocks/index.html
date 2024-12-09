@@ -1,18 +1,21 @@
 {% extends "layout.html" %}
 {% block script %}
-    <script type="text/javascript" src="/front/js/stocks/index.js"></script>
+<script type="text/javascript" src="/front/js/stocks/index.js"></script>
 {% endblock %}
 {% block content %}
 <title>Listado de Stock</title>
 
 <div class="container my-4">
-    <h1 class="mb-3">Listado de Stock</h1>
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="mb-3 text-center">
+        <i class="fas fa-warehouse"></i> Listado de Stock
+    </h1>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
         <a href="agregarStock.html" class="btn btn-primary">
-            <i class="fa fa-plus-circle me-1"></i> Crear
+            <i class="fas fa-plus-circle me-2"></i> Crear
         </a>
         <a href="javascript:history.go(0);" class="btn btn-outline-secondary">
-            <i class="fa fa-sync-alt me-1"></i> Actualizar
+            <i class="fas fa-sync-alt me-2"></i> Actualizar
         </a>
     </div>
 

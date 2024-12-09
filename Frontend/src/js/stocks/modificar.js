@@ -55,13 +55,13 @@ $(function () {
 
         success: function (result) {
 
-            $('#stock').val(result.stock);
-
-            $('#stock_critico').val(result.stock_critico);
-
             $('#sucursalSelect').val(result.sucursal._id);
 
             $('#productoSelect').val(result.producto._id);
+
+            $('#stock').val(result.stock);
+
+            $('#stock_critico').val(result.stock_critico);
 
         }
 
@@ -79,9 +79,9 @@ $(function () {
 
                  _id: $('#_id').val(),
 
-                 producto: $('#productoSelect').val(),
-
                  sucursal: $('#sucursalSelect').val(),
+
+                 producto: $('#productoSelect').val(),
 
                  stock: $('#stock').val(),
 
